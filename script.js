@@ -43,34 +43,6 @@ sideBarClose.addEventListener("click", () => {
   }
 });
 
-// let searchButton = document.querySelector(".search-button");
-//
-// let foodContainer = document.querySelector(".food-container");
-// let inputKeyword = document.querySelector(".search");
-// searchButton.addEventListener("click", function () {
-//   fetch(
-//     "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&q=drink",
-//   )
-//     .then((response) => response.json())
-//     .then((response) => {
-//       let foodSearch = response.hits;
-//       let cards = "";
-//       foodSearch.forEach((m) => (cards += showCards(m)));
-//
-//       foodContainer.innerHTML = cards;
-//     })
-//     .catch((error) => {
-//       console.error("Error fetching data:", error);
-//     });
-// });
-//
-// function showCards(m) {
-//   return `<div class="card">
-//  <img src="${m.recipe.image}" >
-// </div>`;
-// }
-//
-
 let searchButton = document.querySelector(".search-button");
 let inputKeyword = document.querySelector(".search");
 
@@ -221,11 +193,6 @@ function processData() {
         type = type.slice(0, 3).join(", ");
       }
 
-      // let typeBatas = 2;
-      // if (type.length > typeBatas) {
-      //   type = type.slice(0, typeBatas).join(" ");
-      // }
-      //
       slides4 += showSlides4({ image, label, type });
     });
   }
@@ -243,11 +210,6 @@ function processData() {
         type = type.slice(0, 3).join(", ");
       }
 
-      // let typeBatas = 2;
-      // if (type.length > typeBatas) {
-      //   type = type.slice(0, typeBatas).join(" ");
-      // }
-      //
       slides5 += showSlides5({ image, label, type });
     });
   }
