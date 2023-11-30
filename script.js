@@ -54,7 +54,6 @@ searchButton.addEventListener("click", function() {
     .then((response) => response.json())
     .then((response) => {
       let foodSearch = response.hits;
-      // Mengirim parameter pencarian sebagai query parameter di URL
       window.location.href = `index2.html?query=${encodeURIComponent(
         inputKeyword.value,
       )}`;
@@ -104,12 +103,6 @@ window.addEventListener("load", function() {
         cuisinetypeFoods = cuisinetypeData.hits;
         healthtypeFoods = healthtypeData.hits;
         diettypeFoods = diettypeData.hits;
-        console.log("dishtypeData:", dishtypeData); // Add this line to check the structure
-        console.log("mealtypeData:", mealtypeData); // Add this line
-        console.log("cuisinetypeData:", cuisinetypeData); // Add this line
-        console.log("healthtypeData:", healthtypeData); // Add this line
-        console.log("diettypeData:", diettypeData); // Add this line
-
         processData();
       },
     )
@@ -264,3 +257,31 @@ function showSlides5({ image, label, type }) {
 <p>${type}</p>
   </div>`;
 }
+
+//Pagination
+// let paginationNext = document.querySelector(".pagination-button-next");
+// let nextPage = "";
+//
+// paginationNext.addEventListener("click", function() {
+//   fetchRecipeData();
+// });
+//
+// function fetchRecipeData() {
+//   const apiKey = "afef254282056eb258798674f41e04d2";
+//   const apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=${apiKey}&q=${inputKeyword.value}`;
+//
+//   const urlToFetch = nextPage ? nextPage : apiUrl;
+//
+//   fetch(urlToFetch)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       let foodSearch = data.hits;
+//
+//       nextPage =
+//         data._links.next && data._links.next.href ? data._links.next.href : "";
+//       console.log(nextPage);
+//     })
+//     .catch((error) => {
+//       console.error("Error fetching data:", error);
+//     });
+// }

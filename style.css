@@ -543,6 +543,47 @@ section h3 {
   text-align: left;
 }
 
+/* this is pagination index2*/
+.pagination-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 80px;
+  position: relative;
+}
+.pagination-button-next {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: white;
+  margin-top: -15%;
+  width: 100px;
+  position: absolute;
+  height: 40px;
+  border-radius: 2%;
+  margin-left: -20%;
+  background-color: #ff1a1a;
+}
+.pagination-button-previous {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-left: -80%;
+  border-radius: 2%;
+  margin-top: -15%;
+  width: 100px;
+  position: relative;
+  height: 40px;
+  border: 1px solid #ff1a1a;
+  color: #ff1a1a;
+  background-color: white;
+}
+
+.pagination-button-next:hover {
+  color: white;
+}
+.pagination-button-previous:hover {
+  color: #ff1a1a;
+}
 /* this is footer */
 footer {
   height: 60px;
