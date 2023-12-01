@@ -12,6 +12,7 @@ window.addEventListener("load", function() {
       .then((response) => {
         let foodSearch = response.hits;
         let cards = "";
+        let pagination = "";
         foodSearch.forEach((m) => (cards += showCards(m)));
         pagination = showPagination(); //ini memanggil function
         let paginationContainer = document.querySelector(
@@ -42,10 +43,10 @@ function fetchRecipeData() {
       .then((response) => response.json())
       .then((data) => {
         let paginationPage = "";
-        let foodSearch = data.hits;
-        nextPage = data._links.next ? data._links.next.href : null;
-
-        foodSearch.forEach((n) => (paginationPage += showCards(n)));
+        let nextSearch = data.hits; //ini mengambil data hits yang API nya sudah di fetch (nextPage)
+        nextPage = data._links.next ? data._links.next.href : null; //mengecek apakah ada data next di dalam API yang sudah di fetch
+        console.log(nextPage);
+        nextSearch.forEach((n) => (paginationPage += showCards(n))); // data hits yang sudah diambil di loop untuk ditampilkan di showCard
         let foodContainer = document.querySelector(".food-container");
         foodContainer.innerHTML = paginationPage;
       })

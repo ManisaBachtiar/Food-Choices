@@ -1,107 +1,99 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Food Choice</title>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food Choice</title>
 
-    <!-- External scripts -->
-    <script
-      src="https://kit.fontawesome.com/bf5f902c48.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
 
-  <body>
-    <!-- Header section -->
-    <header>
-      <div class="header-container">
-        <div class="menu-icon">
-          <!-- Logo and navigation elements -->
-          <img class="bars" src="image/bar.png" alt="" />
-          <img class="logo" src="image/logo1.png" alt="" />
-          <h1>Food Choice</h1>
-          <input
-            class="search"
-            name="search"
-            type="search"
-            placeholder="Search"
-          />
-          <button type="submit">
-            <i class="fas fa-search fa-lg search-button"></i>
-          </button>
+  <!-- External scripts -->
+  <script src="https://kit.fontawesome.com/bf5f902c48.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header section -->
+  <header>
+    <div class="header-container">
+      <div class="menu-icon">
+        <!-- Logo and navigation elements -->
+        <img class="bars" src="image/bar.png" alt="" />
+        <img class="logo" src="image/logo1.png" alt="" />
+        <h1>Food Choice</h1>
+        <input class="search" name="search" type="search" placeholder="Search" />
+        <button type="submit">
+          <i class="fas fa-search fa-lg search-button"></i>
+        </button>
+      </div>
+
+      <!-- Mobile navigation menu -->
+      <div class="blur"></div>
+      <div class="slide-nav3">
+        <div class="title-hamburger">
+          Menu
+          <i class="fa fa-times fa-xl close-bar"></i>
         </div>
 
-        <!-- Mobile navigation menu -->
-        <div class="blur"></div>
-        <div class="slide-nav3">
-          <div class="title-hamburger">
-            Menu
-            <i class="fa fa-times fa-xl close-bar"></i>
-          </div>
+        <!-- Navigation links -->
+        <ul class="menu-icons" id="menu-icons">
+          <li>
+            <ion-icon name="home-outline"></ion-icon>
+            <a href="#">Home</a>
+          </li>
+          <!-- Dropdown for Food Type -->
+          <li class="dropdown">
+            <ion-icon name="fast-food-outline"></ion-icon>
+            <a href="#" class="closeFood">Food Type</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Meal</a></li>
+              <li><a href="#">Dish</a></li>
+              <li><a href="#">Cuisine</a></li>
+              <li><a href="#">Health</a></li>
+              <li><a href="#">Diet</a></li>
+            </ul>
+          </li>
+          <li>
+            <ion-icon name="accessibility-outline"></ion-icon>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <ion-icon name="scale-outline"></ion-icon>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
 
-          <!-- Navigation links -->
-          <ul class="menu-icons" id="menu-icons">
-            <li>
-              <ion-icon name="home-outline"></ion-icon>
-              <a href="#">Home</a>
-            </li>
-            <!-- Dropdown for Food Type -->
-            <li class="dropdown">
-              <ion-icon name="fast-food-outline"></ion-icon>
-              <a href="#" class="closeFood">Food Type</a>
-              <ul class="dropdown-content">
-                <li><a href="#">Meal</a></li>
-                <li><a href="#">Dish</a></li>
-                <li><a href="#">Cuisine</a></li>
-                <li><a href="#">Health</a></li>
-                <li><a href="#">Diet</a></li>
-              </ul>
-            </li>
-            <li>
-              <ion-icon name="accessibility-outline"></ion-icon>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <ion-icon name="scale-outline"></ion-icon>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
+        <!-- Social media links -->
+        <ul class="menu-links" id="menu-links">
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-envelope fa-lg"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-discord fa-lg"></i></a>
+          </li>
+        </ul>
 
-          <!-- Social media links -->
-          <ul class="menu-links" id="menu-links">
-            <li>
-              <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-envelope fa-lg"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-discord fa-lg"></i></a>
-            </li>
-          </ul>
-
-          <div class="nextDrop">
-            <i class="fa fa-sort-desc fa-xl"></i>
-          </div>
+        <div class="nextDrop">
+          <i class="fa fa-sort-desc fa-xl"></i>
         </div>
       </div>
-    </header>
-    <div class="food-container"></div>
-    <div class="pagination-container"></div>
-  </body>
+    </div>
+  </header>
+  <div class="food-container"></div>
+  <div class="pagination-container"></div>
+</body>
+<script></script>
+<script src="script2.js"></script>
+<script src="script.js"></script>
 
-  <script src="script2.js"></script>
 </html>
