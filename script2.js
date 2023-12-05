@@ -1,68 +1,83 @@
+let previousPages = []; // Array baru untuk menyimpan halaman-halaman sebelumnya
 let nextPage = null;
 
 window.addEventListener("load", function() {
+  // Membaca parameter URL
   const urlParams = new URLSearchParams(window.location.search);
   const queryParam = urlParams.get("query");
 
   if (queryParam) {
-    fetch(
+    // Jika terdapat parameter query, panggil fungsi fetchRecipes
+    fetchRecipes(
       `https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&q=${queryParam}`,
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        let foodSearch = response.hits;
-        let cards = "";
-        let pagination = "";
-        foodSearch.forEach((m) => (cards += showCards(m)));
-        pagination = showPagination(); //ini memanggil function
-        let paginationContainer = document.querySelector(
-          ".pagination-container",
-        ); //memanggil container pagination
-        let foodContainer = document.querySelector(".food-container");
-        foodContainer.innerHTML = cards;
-        paginationContainer.innerHTML = pagination; //ini untuk menampilkan button pagination next dan previous agar berjalan bareng/setelah items muncul
-
-        nextPage = response._links.next ? response._links.next.href : null; // mengecek apakah property next ada dalam object data._links, jika ada maka di isi dengan nilai next.href, jika tidak di isi null
-
-        let paginationNext = document.querySelector(".pagination-button-next");
-        paginationNext.addEventListener("click", function() {
-          fetchRecipeData();
-        });
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+    );
   } else {
-    console.error("Query parameter not found");
+    // Jika tidak ada parameter query, log pesan kesalahan
+    console.error("Parameter query tidak ditemukan");
   }
 });
 
-function fetchRecipeData() {
-  if (nextPage) {
-    fetch(nextPage)
-      .then((response) => response.json())
-      .then((data) => {
-        let paginationPage = "";
-        let nextSearch = data.hits; //ini mengambil data hits yang API nya sudah di fetch (nextPage)
-        nextPage = data._links.next ? data._links.next.href : null; //mengecek apakah ada data next di dalam API yang sudah di fetch
-        console.log(nextPage);
-        nextSearch.forEach((n) => (paginationPage += showCards(n))); // data hits yang sudah diambil di loop untuk ditampilkan di showCard
-        let foodContainer = document.querySelector(".food-container");
-        foodContainer.innerHTML = paginationPage;
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
+function fetchRecipes(url) {
+  // Mengambil data dari URL menggunakan fetch
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      let paginationPage = "";
+      let foodSearch = data.hits;
+      nextPage = data._links.next ? data._links.next.href : null;
+
+      // Mengolah setiap hasil pencarian dan menambahkannya ke paginationPage
+      foodSearch.forEach((n) => (paginationPage += showCards(n)));
+
+      // Menampilkan hasil pencarian di dalam container yang sesuai
+      let foodContainer = document.querySelector(".food-container");
+      foodContainer.innerHTML = paginationPage;
+
+      // Menyimpan respons lengkap ke dalam array previousPages
+      previousPages.push({ url, data });
+
+      // Menampilkan elemen pagination
+      let paginationContainer = document.querySelector(".pagination-container");
+      paginationContainer.innerHTML = showPagination();
+
+      // Menambahkan event listener untuk tombol "Next"
+      let paginationNext = document.querySelector(".pagination-button-next");
+      paginationNext.addEventListener("click", function() {
+        fetchRecipes(nextPage);
       });
+
+      // Menambahkan event listener untuk tombol "Previous"
+      let paginationPrevious = document.querySelector(
+        ".pagination-button-previous",
+      );
+      paginationPrevious.addEventListener("click", function() {
+        fetchPreviousData();
+      });
+    })
+    .catch((error) => {
+      // Menangani kesalahan jika terjadi
+      console.error("Error fetching data:", error);
+    });
+}
+
+function fetchPreviousData() {
+  // Memeriksa apakah ada halaman sebelumnya yang tersimpan
+  if (previousPages.length > 1) {
+    previousPages.pop(); // Menghapus halaman saat ini dari array
+    let previousPage = previousPages.pop(); // Mendapatkan halaman sebelumnya dari array
+    fetchRecipes(previousPage.url);
   }
 }
 
+// Menampilkan kartu untuk setiap hasil pencarian
 function showCards(m) {
   return `<div class="card">
-    <img src="${m.recipe.image}" >
-    <h5> ${m.recipe.label} </h5>
+    <img src="${m.recipe.image}" loading="lazy">
+    <h5><a href="#">${m.recipe.label}</a></h5>
   </div>`;
 }
 
+// Menampilkan elemen pagination
 function showPagination() {
   return `<button class="pagination-button-previous">Previous</button>
     <button class="pagination-button-next">Next</button>`;

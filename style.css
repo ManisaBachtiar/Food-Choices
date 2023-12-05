@@ -507,6 +507,7 @@ section h3 {
 
 .food-container {
   margin-top: 110px;
+  justify-content: space-between;
   display: flex;
   width: 100%;
   height: auto;
@@ -516,8 +517,7 @@ section h3 {
 .card {
   margin: 10px;
   width: 43%;
-  height: 250px;
-  background-color: white;
+  height: 20%;
   border: 1px solid #ddd;
   border-radius: 2%;
 }
@@ -532,15 +532,21 @@ section h3 {
   border-top-right-radius: 2%;
 }
 .card h5 {
-  margin-top: 5px;
+  padding-top: 10px;
   margin-left: 5px;
-
+  margin-right: 5px;
+  padding-bottom: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   width: 95%;
-  height: auto;
+  height: 10%;
   overflow: hidden;
   /*   text-overflow: ellipsis; */
   font-size: 15px;
-  text-align: left;
+}
+.card h5 a {
+  text-decoration: none;
+  color: black;
 }
 
 /* this is pagination index2*/
@@ -1384,6 +1390,49 @@ footer p {
 
   section h3 {
     font-size: 22px;
+  }
+  .food-container {
+    margin-top: 110px;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #fdfdfd;
+    flex-wrap: wrap;
+  }
+  .card {
+    margin: 10px;
+    width: 18%;
+    height: 20%;
+    border: 1px solid #ddd;
+    border-radius: 2%;
+  }
+  .card img {
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    height: auto;
+    object-fit: contain;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+  }
+  .card h5 {
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding-bottom: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 95%;
+    height: 10%;
+    overflow: hidden;
+    /*   text-overflow: ellipsis; */
+    font-size: 15px;
+  }
+  .card h5 a {
+    text-decoration: none;
+    color: black;
   }
 }
 @media screen and (min-width: 1280px) {

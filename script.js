@@ -222,7 +222,7 @@ function processData() {
 processData();
 function showSlides({ image, label, type }) {
   return `<div class="slide">
-    <img src="${image}" >
+    <img src="${image}" loading="lazy">
     <h4><a href="#"> ${label} </a></h4>
     <p>${type}</p>
   </div>`;
@@ -230,7 +230,7 @@ function showSlides({ image, label, type }) {
 
 function showSlides2({ image, label, type }) {
   return `<div class="slide2">
-    <img src="${image}" >
+    <img src="${image}" loading="lazy">
     <h4><a href="#">${label} </a></h4>
     <p>${type}</p>
   </div>`;
@@ -238,21 +238,21 @@ function showSlides2({ image, label, type }) {
 
 function showSlides3({ image, label, type }) {
   return `<div class="slide3">
-    <img src="${image}" >
+    <img src="${image}" loading="lazy">
     <h4><a href="#">${label}</a></h4>
     <p>${type}</p>
   </div>`;
 }
 function showSlides4({ image, label, type }) {
   return `<div class="slide4">
-    <img src="${image}" >
+    <img src="${image}" loading="lazy">
     <h4><a href="#">${label}</a></h4>
   <p>${type}</p>
   </div>`;
 }
 function showSlides5({ image, label, type }) {
   return `<div class="slide5">
-    <img src="${image}" >
+    <img src="${image}" loading="lazy">
     <h4><a href="#"> ${label} </a></h4>
 <p>${type}</p>
   </div>`;
