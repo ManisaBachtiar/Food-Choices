@@ -1,15 +1,15 @@
-let foodClose = document.getElementsByClassName("dropdown-content");
-let foodCloseBtn = document.getElementsByClassName("nextDrop");
-let foodLi = foodClose[0];
-let foodBtn = foodCloseBtn[0];
-// let last = foodClose.lastElementChild;
-foodBtn.addEventListener("click", () => {
-  if (foodLi.style.display === "none" || foodLi.style.display === "") {
-    foodLi.style.display = "block";
-  } else {
-    foodLi.style.display = "none";
-  }
-});
+// let foodClose = document.getElementsByClassName("dropdown-content");
+// let foodCloseBtn = document.getElementsByClassName("nextDrop");
+// let foodLi = foodClose[0];
+// let foodBtn = foodCloseBtn[0];
+// // let last = foodClose.lastElementChild;
+// foodBtn.addEventListener("click", () => {
+//   if (foodLi.style.display === "none" || foodLi.style.display === "") {
+//     foodLi.style.display = "block";
+//   } else {
+//     foodLi.style.display = "none";
+//   }
+// });
 let closeBar = document.getElementsByClassName("bars");
 let closeBarOpen = closeBar[0];
 let sideBar = document.getElementsByClassName("slide-nav3");
@@ -46,10 +46,10 @@ sideBarClose.addEventListener("click", () => {
 let searchButton = document.querySelector(".search-button");
 let inputKeyword = document.querySelector(".search");
 
-searchButton.addEventListener("click", function() {
+searchButton.addEventListener("click", function () {
   fetch(
     "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&q=" +
-    inputKeyword.value,
+      inputKeyword.value,
   )
     .then((response) => response.json())
     .then((response) => {
@@ -68,7 +68,7 @@ let mealtypeFoods;
 let cuisinetypeFoods;
 let healthtypeFoods;
 let diettypeFoods;
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   let dishtypeURL =
     "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Biscuits%20and%20cookies&dishType=Bread&dishType=Cereals&dishType=Condiments%20and%20sauces&dishType=Desserts&dishType=Drinks&dishType=Main%20course&dishType=Pancake&dishType=Preps&dishType=Preserve&dishType=Salad&dishType=Sandwiches&dishType=Side%20dish&dishType=Soup&dishType=Starter&dishType=Sweets&random=true";
 
