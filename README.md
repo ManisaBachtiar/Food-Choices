@@ -1,2 +1,2 @@
 # Food-Choices
-You can select the ingredients and filter every meal you eat
+You can see the ingredients and filter every meal you eat
