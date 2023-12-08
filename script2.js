@@ -1,7 +1,7 @@
 let previousPages = []; // Array baru untuk menyimpan halaman-halaman sebelumnya
 let nextPage = null;
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   // Membaca parameter URL
   const urlParams = new URLSearchParams(window.location.search);
   const queryParam = urlParams.get("query");
@@ -42,7 +42,7 @@ function fetchRecipes(url) {
 
       // Menambahkan event listener untuk tombol "Next"
       let paginationNext = document.querySelector(".pagination-button-next");
-      paginationNext.addEventListener("click", function() {
+      paginationNext.addEventListener("click", function () {
         fetchRecipes(nextPage);
       });
 
@@ -50,7 +50,7 @@ function fetchRecipes(url) {
       let paginationPrevious = document.querySelector(
         ".pagination-button-previous",
       );
-      paginationPrevious.addEventListener("click", function() {
+      paginationPrevious.addEventListener("click", function () {
         fetchPreviousData();
       });
     })
@@ -74,6 +74,7 @@ function showCards(m) {
   return `<div class="card">
     <img src="${m.recipe.image}" loading="lazy">
     <h5><a href="#">${m.recipe.label}</a></h5>
+<p> ${m.recipe.mealType}</p>
   </div>`;
 }
 
