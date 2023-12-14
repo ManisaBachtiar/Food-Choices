@@ -91,19 +91,20 @@ input:-webkit-autofill:focus {
 }
 
 /* button styles */
-button {
+.btnSearch {
   position: absolute;
   top: 73px;
   right: 0;
   left: 86%;
   background-color: white;
+
   color: grey;
   height: 30px;
   border: 0px solid #ccc;
   width: 40px;
 }
 
-button:active {
+.btnSearch:active {
   transform: scale(0.95);
   color: #495057;
 }
@@ -155,11 +156,6 @@ button:active {
   margin-left: 150px;
   position: absolute;
   margin-top: 13px;
-  color: #424242;
-}
-
-.fa-sort-desc {
-  margin-left: 215px;
   color: #424242;
 }
 
@@ -421,6 +417,13 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 2%;
 }
+.slide:hover,
+.slide2:hover,
+.slide3:hover,
+.slide4:hover,
+.slide5:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
 .slide img,
 .slide2 img,
@@ -570,48 +573,120 @@ section h3 {
   height: 80px;
   position: relative;
 }
-.pagination-button-next {
+.pagination-next {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   color: white;
-  margin-top: -15%;
+  margin-top: 5%;
   width: 100px;
   position: absolute;
   height: 40px;
+  border: none;
   border-radius: 2%;
-  margin-left: -20%;
+  margin-left: 65%;
   background-color: #ff1a1a;
+  transition: transform 0.5s ease;
 }
-.pagination-button-previous {
+.pagination-previous {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  margin-left: -80%;
+  margin-left: 7%;
   border-radius: 2%;
-  margin-top: -15%;
+  margin-top: 5%;
   width: 100px;
   position: relative;
   height: 40px;
   border: 1px solid #ff1a1a;
   color: #ff1a1a;
   background-color: white;
+  transition: transform 0.5s ease;
 }
 
-.pagination-button-next:hover {
+.pagination-next:hover {
   color: white;
+  transform: scale(1.1);
 }
-.pagination-button-previous:hover {
+.pagination-previous:hover {
   color: #ff1a1a;
+
+  transform: scale(1.1);
 }
-/* this is footer */
+
 footer {
-  height: 60px;
-  width: 100%;
-  background-color: #f7f7f7;
+  height: auto;
+  color: #fff;
 }
-footer p {
+
+.footer-contact {
+  padding: 30px 0;
+
+  background-color: #050505;
+}
+
+.footer-contact {
+  height: 130px;
+}
+.footer-contact h2 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 5px;
+
+  margin-left: 15px;
+}
+
+.footer-contact p {
+  font-size: 16px;
+  line-height: 1.6;
+
+  margin-left: 15px;
+
+  margin-right: 15px;
+  color: white;
   font-weight: var(--light-font);
-  padding-top: 50px;
-  padding-bottom: 10px;
-  text-align: center;
 }
+.fa-envelope,
+.fa-square-instagram,
+.fa-phone {
+  padding-right: 10px;
+}
+
+.footer-copyright {
+  background-color: #050505;
+}
+.copyright-text {
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  font-weight: var(--light-font);
+}
+
+/* this is footer */
+/* footer { */
+/*   height: auto; */
+/*   width: 100%; */
+/*   background-color: red; */
+/* } */
+/* .about-foot { */
+/*   background-color: yellow; */
+/*   margin-bottom: 20px; */
+/*   width: 100%; */
+/*   height: 260px; */
+/* } */
+/* .about-foot h4 { */
+/*   text-align: center; */
+/*   margin-top: 20px; */
+/* } */
+/* .contact-foot { */
+/*   background-color: yellow; */
+/*   margin-bottom: 20px; */
+/*   width: 100%; */
+/*   height: 260px; */
+/* } */
+/**/
+/* footer p { */
+/*   font-weight: var(--light-font); */
+/*   padding-top: 50px; */
+/*   padding-bottom: 10px; */
+/*   text-align: center; */
+/* } */
 /* Responsive Styles */
 @media screen and (min-width: 390px) {
   .logo {
@@ -908,7 +983,7 @@ footer p {
 
   .menu-icons li {
     padding: 5px;
-    margin-left: 8px;
+    margin-left: 12px;
   }
 
   .menu-icons li img {
@@ -945,7 +1020,7 @@ footer p {
     color: #242424;
   }
 
-  button {
+  .btnSearch {
     position: absolute;
     top: 73px;
     right: 0;
@@ -1047,13 +1122,13 @@ footer p {
     width: 28%;
     margin-left: 3%;
   }
-  .pagination-button-next {
-    margin-top: -6%;
-    margin-left: -9%;
+  .pagination-next {
+    margin-top: 3%;
+    margin-left: 75%;
   }
-  .pagination-button-previous {
-    margin-left: -90%;
-    margin-top: -6%;
+  .pagination-previous {
+    margin-left: 10%;
+    margin-top: 3%;
   }
 }
 /* Responsive Styles for Min Width 1024px */
@@ -1224,7 +1299,7 @@ footer p {
     color: #242424;
   }
 
-  button {
+  .btnSearch {
     position: absolute;
     top: 73px;
     right: 0;
@@ -1392,13 +1467,13 @@ footer p {
     width: 85%;
     font-size: 19px;
   }
-  .pagination-button-next {
-    margin-top: -4%;
-    margin-left: -9%;
+  .pagination-next {
+    margin-top: 2%;
+    margin-left: 80%;
   }
-  .pagination-button-previous {
-    margin-left: -90%;
-    margin-top: -4%;
+  .pagination-previous {
+    margin-left: 10%;
+    margin-top: 2%;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -1545,7 +1620,7 @@ footer p {
     margin-left: -20px;
     color: #242424;
   }
-  button {
+  .btnSearch {
     position: absolute;
     top: 73px;
     right: 0;

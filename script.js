@@ -43,25 +43,62 @@ sideBarClose.addEventListener("click", () => {
   }
 });
 
+// let searchButton = document.querySelector(".search-button");
+// let inputKeyword = document.querySelector(".search");
+//
+// searchButton.addEventListener("click", function () {
+//   fetch(
+//     "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&q=" +
+//       inputKeyword.value,
+//   )
+//     .then((response) => response.json())
+//     .then((response) => {
+//       let foodSearch = response.hits;
+//       window.location.href = `index2.html?query=${encodeURIComponent(
+//         inputKeyword.value,
+//       )}`;
+//     })
+//     .catch((error) => {
+//       console.error("Error fetching data:", error);
+//     });
+// });
 let searchButton = document.querySelector(".search-button");
 let inputKeyword = document.querySelector(".search");
 
-searchButton.addEventListener("click", function () {
+searchButton.addEventListener("click", fetchData);
+inputKeyword.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    fetchData();
+  }
+});
+
+function fetchData() {
   fetch(
     "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&q=" +
       inputKeyword.value,
   )
     .then((response) => response.json())
-    .then((response) => {
-      let foodSearch = response.hits;
-      window.location.href = `index2.html?query=${encodeURIComponent(
-        inputKeyword.value,
-      )}`;
+    .then((data) => {
+      let foodSearch = data.hits;
+      if (foodSearch.length === 0) {
+        Swal.fire({
+          icon: "error",
+          title: "Item Not Found",
+          text: "Sorry, the item you are looking for was not found.",
+        });
+      } else {
+        window.location.href = `index2.html?query=${encodeURIComponent(
+          inputKeyword.value,
+        )}`;
+      }
+      // window.location.href = `index2.html?query=${encodeURIComponent(
+      //   inputKeyword.value,
+      // )}`;
     })
     .catch((error) => {
-      console.error("Error fetching data:", error);
+      alert("Error fetching data:", error);
     });
-});
+}
 
 let dishtypeFoods;
 let mealtypeFoods;

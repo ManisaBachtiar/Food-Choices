@@ -39,17 +39,22 @@ function fetchRecipes(url) {
       // Menampilkan elemen pagination
       let paginationContainer = document.querySelector(".pagination-container");
       paginationContainer.innerHTML = showPagination();
-
+      console.log(paginationContainer);
+      let labelLink = document.querySelectorAll(".labelLink");
+      labelLink.forEach((lnk) => {
+        lnk.addEventListener("click", function () {
+          let uriLink = this.dataset.uri;
+          console.log(uriLink);
+        });
+      });
       // Menambahkan event listener untuk tombol "Next"
-      let paginationNext = document.querySelector(".pagination-button-next");
+      let paginationNext = document.querySelector(".pagination-next");
       paginationNext.addEventListener("click", function () {
         fetchRecipes(nextPage);
       });
 
       // Menambahkan event listener untuk tombol "Previous"
-      let paginationPrevious = document.querySelector(
-        ".pagination-button-previous",
-      );
+      let paginationPrevious = document.querySelector(".pagination-previous");
       paginationPrevious.addEventListener("click", function () {
         fetchPreviousData();
       });
@@ -69,17 +74,26 @@ function fetchPreviousData() {
   }
 }
 
-// Menampilkan kartu untuk setiap hasil pencarian
+// Now detailLinksArray is a regular array that you can manipulate
+// Access the dataUri attribute and log it to the console
+
+// detailLinks.addEventListener("click", function () {
+//     // Access the dataUri attribute and log it to the console
+//     const dataUri = this.getAttribute("dataUri");
+//     console.log(dataUri);
+//   });
+// });
+
 function showCards(m) {
   return `<div class="card">
     <img src="${m.recipe.image}" loading="lazy">
-    <h5><a href="#">${m.recipe.label}</a></h5>
+    <h5><a href="#" class="labelLink" data-uri="${m.recipe.uri}">${m.recipe.uri}</a></h5>
 <p> ${m.recipe.mealType}</p>
   </div>`;
 }
 
 // Menampilkan elemen pagination
 function showPagination() {
-  return `<button class="pagination-button-previous">Previous</button>
-    <button class="pagination-button-next">Next</button>`;
+  return `<button class="pagination-previous">Previous</button>
+    <button class="pagination-next">Next</button>`;
 }
