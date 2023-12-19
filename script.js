@@ -1,15 +1,3 @@
-// let foodClose = document.getElementsByClassName("dropdown-content");
-// let foodCloseBtn = document.getElementsByClassName("nextDrop");
-// let foodLi = foodClose[0];
-// let foodBtn = foodCloseBtn[0];
-// // let last = foodClose.lastElementChild;
-// foodBtn.addEventListener("click", () => {
-//   if (foodLi.style.display === "none" || foodLi.style.display === "") {
-//     foodLi.style.display = "block";
-//   } else {
-//     foodLi.style.display = "none";
-//   }
-// });
 let closeBar = document.getElementsByClassName("bars");
 let closeBarOpen = closeBar[0];
 let sideBar = document.getElementsByClassName("slide-nav3");
@@ -43,25 +31,6 @@ sideBarClose.addEventListener("click", () => {
   }
 });
 
-// let searchButton = document.querySelector(".search-button");
-// let inputKeyword = document.querySelector(".search");
-//
-// searchButton.addEventListener("click", function () {
-//   fetch(
-//     "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&q=" +
-//       inputKeyword.value,
-//   )
-//     .then((response) => response.json())
-//     .then((response) => {
-//       let foodSearch = response.hits;
-//       window.location.href = `index2.html?query=${encodeURIComponent(
-//         inputKeyword.value,
-//       )}`;
-//     })
-//     .catch((error) => {
-//       console.error("Error fetching data:", error);
-//     });
-// });
 let searchButton = document.querySelector(".search-button");
 let inputKeyword = document.querySelector(".search");
 
@@ -91,9 +60,6 @@ function fetchData() {
           inputKeyword.value,
         )}`;
       }
-      // window.location.href = `index2.html?query=${encodeURIComponent(
-      //   inputKeyword.value,
-      // )}`;
     })
     .catch((error) => {
       alert("Error fetching data:", error);
@@ -294,31 +260,10 @@ function showSlides5({ image, label, type }) {
 <p>${type}</p>
   </div>`;
 }
+let seeDish = document.querySelectorAll(".fa-angle-right");
 
-//Pagination
-// let paginationNext = document.querySelector(".pagination-button-next");
-// let nextPage = "";
-//
-// paginationNext.addEventListener("click", function() {
-//   fetchRecipeData();
-// });
-//
-// function fetchRecipeData() {
-//   const apiKey = "afef254282056eb258798674f41e04d2";
-//   const apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=${apiKey}&q=${inputKeyword.value}`;
-//
-//   const urlToFetch = nextPage ? nextPage : apiUrl;
-//
-//   fetch(urlToFetch)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       let foodSearch = data.hits;
-//
-//       nextPage =
-//         data._links.next && data._links.next.href ? data._links.next.href : "";
-//       console.log(nextPage);
-//     })
-//     .catch((error) => {
-//       console.error("Error fetching data:", error);
-//     });
-// }
+seeDish.forEach((dish, index) => {
+  dish.addEventListener("click", () => {
+    window.location.href = `index2.html?index=${index}`;
+  });
+});
