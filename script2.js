@@ -1,5 +1,6 @@
 let previousPages = [];
 let nextPage = null;
+let clickedIndex = null; // Variabel global untuk menyimpan indeks yang diklik
 
 window.addEventListener("load", function () {
   const urlParams = new URLSearchParams(window.location.search);
@@ -18,11 +19,23 @@ window.addEventListener("load", function () {
   if (!isNaN(clickedIndex)) {
     if (clickedIndex === 0) {
       fetchRecipes(
-        "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Biscuits%20and%20cookies&dishType=Bread&dishType=Cereals&dishType=Condiments%20and%20sauces&dishType=Desserts&dishType=Drinks&dishType=Main%20course&dishType=Pancake&dishType=Preps&dishType=Preserve&dishType=Salad&dishType=Sandwiches&dishType=Side%20dish&dishType=Soup&dishType=Starter&dishType=Sweets",
+        "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Biscuits%20and%20cookies&dishType=Bread&dishType=Cereals",
       );
     } else if (clickedIndex === 1) {
       fetchRecipes(
-        "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&mealType=Breakfast&mealType=Dinner&mealType=Lunch&mealType=Snack&mealType=Teatime",
+        "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Main%20course",
+      );
+    } else if (clickedIndex === 2) {
+      fetchRecipes(
+        "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Starter",
+      );
+    } else if (clickedIndex === 3) {
+      fetchRecipes(
+        "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Condiments%20and%20sauces",
+      );
+    } else if (clickedIndex === 4) {
+      fetchRecipes(
+        "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Preserve",
       );
     } else {
       console.error("Invalid index:", clickedIndex);
@@ -84,7 +97,7 @@ function showCards(m) {
   return `<div class="card">
     <img src="${m.recipe.image}" loading="lazy">
     <h5><a href="#" class="labelLink">${m.recipe.label}</a></h5>
-    <p>${m.recipe.mealType}</p>
+    <p>${m.recipe.dishType}</p>
   </div>`;
 }
 

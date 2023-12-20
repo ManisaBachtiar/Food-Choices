@@ -73,16 +73,15 @@ let healthtypeFoods;
 let diettypeFoods;
 window.addEventListener("load", function () {
   let dishtypeURL =
-    "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Biscuits%20and%20cookies&dishType=Bread&dishType=Cereals&dishType=Condiments%20and%20sauces&dishType=Desserts&dishType=Drinks&dishType=Main%20course&dishType=Pancake&dishType=Preps&dishType=Preserve&dishType=Salad&dishType=Sandwiches&dishType=Side%20dish&dishType=Soup&dishType=Starter&dishType=Sweets&random=true";
-
+    "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Biscuits%20and%20cookies&dishType=Bread&dishType=Cereals&random=true";
   let mealtypeURL =
-    "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&mealType=Breakfast&mealType=Dinner&mealType=Lunch&mealType=Snack&mealType=Teatime&random=true";
+    "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Main%20course&random=true";
   let cuisinetypeURL =
-    "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&cuisineType=American&cuisineType=Asian&cuisineType=British&cuisineType=Caribbean&cuisineType=Central%20Europe&cuisineType=Chinese&cuisineType=Eastern%20Europe&cuisineType=French&cuisineType=Indian&cuisineType=Italian&cuisineType=Japanese&cuisineType=Kosher&cuisineType=Mediterranean&cuisineType=Mexican&cuisineType=Middle%20Eastern&cuisineType=Nordic&cuisineType=South%20American&cuisineType=South%20East%20Asian&random=true";
+    "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Starter&random=true";
   let healthtypeURL =
-    "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&health=alcohol-free&health=egg-free&health=fish-free&health=kidney-friendly&health=low-sugar&health=peanut-free&health=pork-free&health=vegan&health=vegetarian&random=true";
+    "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Condiments%20and%20sauces&random=true";
   let diettypeURL =
-    "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&diet=high-protein&diet=low-carb&diet=low-fat&diet=low-sodium&random=true";
+    "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Preserve&random=true";
   Promise.all([
     fetch(dishtypeURL),
     fetch(mealtypeURL),
@@ -142,7 +141,7 @@ function processData() {
     mealtypeFoods.forEach((m) => {
       let image = m.recipe.image;
       let label = m.recipe.label;
-      let type = m.recipe.mealType;
+      let type = m.recipe.dishType;
       let kataBatas = 5;
       let labelArray = label.split(" ");
       if (labelArray.length > kataBatas) {
@@ -161,7 +160,7 @@ function processData() {
     cuisinetypeFoods.forEach((m) => {
       let image = m.recipe.image;
       let label = m.recipe.label;
-      let type = m.recipe.cuisineType;
+      let type = m.recipe.dishType;
       let kataBatas = 5;
       let labelArray = label.split(" ");
       if (labelArray.length > kataBatas) {
@@ -179,7 +178,7 @@ function processData() {
     healthtypeFoods.forEach((m) => {
       let image = m.recipe.image;
       let label = m.recipe.label;
-      let type = m.recipe.healthLabels;
+      let type = m.recipe.dishType;
       let kataBatas = 5;
       let labelArray = label.split(" ");
       if (labelArray.length > kataBatas) {
@@ -196,7 +195,7 @@ function processData() {
     diettypeFoods.forEach((m) => {
       let image = m.recipe.image;
       let label = m.recipe.label;
-      let type = m.recipe.dietLabels;
+      let type = m.recipe.dishType;
       let kataBatas = 5;
       let labelArray = label.split(" ");
       if (labelArray.length > kataBatas) {
