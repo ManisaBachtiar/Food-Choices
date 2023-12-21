@@ -106,6 +106,36 @@ window.addEventListener("load", function () {
         healthtypeFoods = healthtypeData.hits;
         diettypeFoods = diettypeData.hits;
         processData();
+        document.querySelectorAll(".labelLink1").forEach((link, index) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            handleCardClick(dishtypeFoods[index].recipe);
+          });
+        });
+        document.querySelectorAll(".labelLink2").forEach((link, index) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            handleCardClick(mealtypeFoods[index].recipe);
+          });
+        });
+        document.querySelectorAll(".labelLink3").forEach((link, index) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            handleCardClick(cuisinetypeFoods[index].recipe);
+          });
+        });
+        document.querySelectorAll(".labelLink4").forEach((link, index) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            handleCardClick(healthtypeFoods[index].recipe);
+          });
+        });
+        document.querySelectorAll(".labelLink5").forEach((link, index) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            handleCardClick(diettypeFoods[index].recipe);
+          });
+        });
       },
     )
     .catch((error) => {
@@ -225,7 +255,8 @@ processData();
 function showSlides({ image, label, type }) {
   return `<div class="slide">
     <img src="${image}" loading="lazy">
-    <h4><a href="#"> ${label} </a></h4>
+
+    <h4><a href="" class="labelLink1">${label}</a></h4>
     <p>${type}</p>
   </div>`;
 }
@@ -233,7 +264,8 @@ function showSlides({ image, label, type }) {
 function showSlides2({ image, label, type }) {
   return `<div class="slide2">
     <img src="${image}" loading="lazy">
-    <h4><a href="#">${label} </a></h4>
+
+    <h4><a href="" class="labelLink2">${label}</a></h4>
     <p>${type}</p>
   </div>`;
 }
@@ -241,26 +273,40 @@ function showSlides2({ image, label, type }) {
 function showSlides3({ image, label, type }) {
   return `<div class="slide3">
     <img src="${image}" loading="lazy">
-    <h4><a href="#">${label}</a></h4>
+
+    <h4><a href="" class="labelLink3">${label}</a></h4>
     <p>${type}</p>
   </div>`;
 }
 function showSlides4({ image, label, type }) {
   return `<div class="slide4">
     <img src="${image}" loading="lazy">
-    <h4><a href="#">${label}</a></h4>
+    <h4><a href="" class="labelLink4">${label}</a></h4>
   <p>${type}</p>
   </div>`;
 }
 function showSlides5({ image, label, type }) {
   return `<div class="slide5">
     <img src="${image}" loading="lazy">
-    <h4><a href="#"> ${label} </a></h4>
-<p>${type}</p>
+
+    <h4><a href="" class="labelLink5">${label}</a></h4>
+  <p>${type}</p>
   </div>`;
 }
-let seeDish = document.querySelectorAll(".fa-angle-right");
 
+function handleCardClick(recipe) {
+  localStorage.setItem("selectedRecipe", JSON.stringify(recipe));
+  window.location.href = "index3.html";
+}
+let seeMeal = document.querySelectorAll(".menu");
+console.log(seeMeal);
+seeMeal.forEach((meal, index1) => {
+  meal.addEventListener("click", () => {
+    window.location.href = `index2.html?index1=${index1}`;
+  });
+});
+
+let seeDish = document.querySelectorAll(".fa-angle-right");
 seeDish.forEach((dish, index) => {
   dish.addEventListener("click", () => {
     window.location.href = `index2.html?index=${index}`;
