@@ -1,190 +1,175 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Meta tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Food Choice</title>
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css"
-      rel="stylesheet"
-    />
-    <!-- External scripts -->
-    <script
-      src="https://kit.fontawesome.com/bf5f902c48.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food Choice</title>
 
-  <body>
-    <!-- Header section -->
-    <header>
-      <div class="header-container">
-        <div class="menu-icon">
-          <img class="bars" src="image/bar.png" alt="" />
-          <img class="logo" src="image/logo1.png" alt="" />
-          <h1>Food Choice</h1>
-          <input
-            class="search"
-            name="search"
-            type="search"
-            placeholder="Search"
-          />
-          <button type="submit" class="btnSearch">
-            <i class="fas fa-search fa-lg search-button"></i>
-          </button>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet" />
+  <!-- External scripts -->
+  <script src="https://kit.fontawesome.com/bf5f902c48.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Header section -->
+  <header>
+    <div class="header-container">
+      <div class="menu-icon">
+        <img class="bars" src="image/bar.png" alt="" />
+        <img class="logo" src="image/logo1.png" alt="" />
+        <h1>Food Choice</h1>
+        <input class="search" name="search" type="search" placeholder="Search" />
+        <button type="submit" class="btnSearch">
+          <i class="fas fa-search fa-lg search-button"></i>
+        </button>
+      </div>
+
+      <!-- Mobile navigation menu -->
+      <div class="blur"></div>
+      <div class="slide-nav3">
+        <div class="title-hamburger">
+          Menu
+          <i class="fa fa-times fa-xl close-bar"></i>
         </div>
 
-        <!-- Mobile navigation menu -->
-        <div class="blur"></div>
-        <div class="slide-nav3">
-          <div class="title-hamburger">
-            Menu
-            <i class="fa fa-times fa-xl close-bar"></i>
-          </div>
+        <!-- Navigation links -->
+        <ul class="menu-icons" id="menu-icons">
+          <li>
+            <ion-icon name="home-outline"></ion-icon>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <ion-icon name="fast-food-outline"></ion-icon>
+            <a href="#meal">Meal Type</a>
+          </li>
+          <li>
+            <ion-icon name="accessibility-outline"></ion-icon>
+            <a href="#dish" class="dish1">Dish Type</a>
+          </li>
+          <li>
+            <ion-icon name="scale-outline"></ion-icon>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
 
-          <!-- Navigation links -->
-          <ul class="menu-icons" id="menu-icons">
-            <li>
-              <ion-icon name="home-outline"></ion-icon>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <ion-icon name="fast-food-outline"></ion-icon>
-              <a href="#">Food Type</a>
-            </li>
-            <li>
-              <ion-icon name="accessibility-outline"></ion-icon>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <ion-icon name="scale-outline"></ion-icon>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-
-          <!-- Social media links -->
-          <ul class="menu-links" id="menu-links">
-            <li>
-              <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-envelope fa-lg"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-discord fa-lg"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-
-    <!-- Main navigation section -->
-    <nav>
-      <div class="nav-content">
-        <div class="img"><img src="image/banner.png" alt="" /></div>
-        <div class="img2"><img src="image/banner3.png" alt="" /></div>
-        <h1>Explore Tasty Foods and See What's in Your Meals</h1>
-        <p>
-          See the ingredients, learn about health benefits, and savor the
-          goodness in every bite, so make wise food choices with us!
-        </p>
-        <div class="explore">Explore</div>
-      </div>
-    </nav>
-
-    <!-- Menu container -->
-    <div class="menu-container">
-      <div class="menu">
-        <img src="image/breakfast.png" alt="" />
-        <h5>Breakfast</h5>
-      </div>
-      <div class="menu">
-        <img src="image/lunch.png" alt="" />
-        <h5>Lunch</h5>
-      </div>
-      <div class="menu">
-        <img src="image/moon2.png" alt="" />
-        <h5>Dinner</h5>
-      </div>
-      <div class="menu">
-        <img src="image/drink.png" alt="" />
-        <h5>Drink</h5>
+        <!-- Social media links -->
+        <ul class="menu-links" id="menu-links">
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-envelope fa-lg"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-discord fa-lg"></i></a>
+          </li>
+        </ul>
       </div>
     </div>
+  </header>
 
-    <!-- Section 1 -->
-    <section>
-      <h3>Indulging in Delectable Snacks</h3>
-      <i class="fa-solid fa-angle-right"></i>
-      <div class="slider-container"></div>
-    </section>
+  <!-- Main navigation section -->
+  <nav>
+    <div class="nav-content">
+      <div class="img"><img src="image/banner.png" alt="" /></div>
+      <div class="img2"><img src="image/banner3.png" alt="" /></div>
+      <h1>Explore Tasty Foods and See What's in Your Meals</h1>
+      <p>
+        See the ingredients, learn about health benefits, and savor the
+        goodness in every bite, so make wise food choices with us!
+      </p>
+      <div class="explore">Explore</div>
+    </div>
+  </nav>
 
-    <!-- Section 2 -->
-    <section class="section2">
-      <h3>Explore Tasty Main Courses</h3>
-      <i class="fa-solid fa-angle-right"></i>
-      <div class="slider-container2"></div>
-    </section>
+  <!-- Menu container -->
+  <div class="menu-container" id="meal">
+    <div class="menu">
+      <img src="image/breakfast.png" alt="" />
+      <h5>Breakfast</h5>
+    </div>
+    <div class="menu">
+      <img src="image/lunch.png" alt="" />
+      <h5>Lunch</h5>
+    </div>
+    <div class="menu">
+      <img src="image/moon2.png" alt="" />
+      <h5>Dinner</h5>
+    </div>
+    <div class="menu">
+      <img src="image/drink.png" alt="" />
+      <h5>Drink</h5>
+    </div>
+  </div>
 
-    <!-- Section 3 -->
-    <section class="section3">
-      <h3>Explore Mouthwatering Starters</h3>
-      <i class="fa-solid fa-angle-right"></i>
-      <div class="slider-container3"></div>
-    </section>
+  <!-- Section 1 -->
+  <section id="dish">
+    <h3>Indulging in Delectable Snacks</h3>
+    <i class="fa-solid fa-angle-right"></i>
 
-    <!-- Section 4 -->
-    <section class="section4">
-      <h3>Saucy Discoveries</h3>
-      <i class="fa-solid fa-angle-right"></i>
-      <div class="slider-container4"></div>
-    </section>
+    <div class="lds-dual-ring" id="loading"></div>
+    <div class="slider-container"></div>
+  </section>
 
-    <!-- Section 5 -->
-    <section class="section5">
-      <h3>Enjoy Preserved Goodness</h3>
-      <i class="fa-solid fa-angle-right"></i>
-      <div class="slider-container5"></div>
-    </section>
-    <footer>
-      <div class="footer-contact">
-        <h2>Contact</h2>
-        <p><i class="fa-solid fa-envelope"></i>Email: FoodChoicee@.com</p>
+  <!-- Section 2 -->
+  <section class="section2">
+    <h3>Explore Tasty Main Courses</h3>
+    <i class="fa-solid fa-angle-right"></i>
+    <div class="slider-container2"></div>
+  </section>
 
-        <p>
-          <i class="fa-brands fa-square-instagram"></i>Instagram: @Food-Choices
-        </p>
-        <p><i class="fa-solid fa-phone"></i>Phone: 0812-3456-789</p>
-      </div>
-      <div class="footer-copyright">
-        <p class="copyright-text">
-          &copy; 2023 Manisa Bachtiar. All rights reserved.
-        </p>
-      </div>
-    </footer>
-    <script src="script.js"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
+  <!-- Section 3 -->
+  <section class="section3">
+    <h3>Explore Mouthwatering Starters</h3>
+    <i class="fa-solid fa-angle-right"></i>
+    <div class="slider-container3"></div>
+  </section>
 
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+  <!-- Section 4 -->
+  <section class="section4">
+    <h3>Saucy Discoveries</h3>
+    <i class="fa-solid fa-angle-right"></i>
+    <div class="slider-container4"></div>
+  </section>
+
+  <!-- Section 5 -->
+  <section class="section5">
+    <h3>Enjoy Preserved Goodness</h3>
+    <i class="fa-solid fa-angle-right"></i>
+    <div class="slider-container5"></div>
+  </section>
+  </div>
+  <footer id="contact">
+    <div class="footer-contact">
+      <h2>Contact</h2>
+      <p><i class="fa-solid fa-envelope"></i>Email: FoodChoicee@.com</p>
+
+      <p>
+        <i class="fa-brands fa-square-instagram"></i>Instagram: @Food-Choices
+      </p>
+      <p><i class="fa-solid fa-phone"></i>Phone: 0812-3456-789</p>
+    </div>
+    <div class="footer-copyright">
+      <p class="copyright-text">
+        &copy; 2023 Manisa Bachtiar. All rights reserved.
+      </p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>

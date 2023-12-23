@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-weight: bold;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -321,6 +322,7 @@ ion-icon {
 /* 4 flex items below the navbar */
 .menu-container {
   width: 100%;
+  scroll-margin-top: 120px;
   height: 170px;
   display: flex;
   justify-content: center;
@@ -359,9 +361,12 @@ ion-icon {
   margin-left: 12px;
   color: #333333;
 }
+
 /* Menu slider memunculkan API */
 
 section {
+  scroll-margin-top: 120px;
+  top: 0;
   margin-top: 25px;
   width: 100%;
   height: 340px;
@@ -607,6 +612,37 @@ section h3 {
   color: #ff1a1a;
 
   transform: scale(1.1);
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  transition: opacity 0.5s ease; /* Menambahkan efek transisi smooth */
+
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin-left: 150px;
+  margin-top: 100px;
+  border-radius: 50%;
+  border: 6px solid grey;
+  border-color: grey transparent grey transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+.lds-dual-ring.active:after {
+  animation: none; /* Menghentikan animasi saat kelas "active" ditambahkan */
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 footer {

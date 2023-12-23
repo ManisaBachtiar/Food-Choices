@@ -106,6 +106,9 @@ window.addEventListener("load", function () {
         healthtypeFoods = healthtypeData.hits;
         diettypeFoods = diettypeData.hits;
         processData();
+        let load = document.getElementById("loading");
+        console.log(load);
+        load.style.display = "none";
         document.querySelectorAll(".labelLink1").forEach((link, index) => {
           link.addEventListener("click", function (event) {
             event.preventDefault();
