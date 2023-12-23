@@ -419,7 +419,7 @@ section h3 {
   background-color: white;
   height: 265px;
   border: 1px solid #ddd;
-  border-radius: 2%;
+  border-radius: 1%;
 }
 .slide:hover,
 .slide2:hover,
@@ -439,7 +439,6 @@ section h3 {
   width: 162px;
   height: auto;
   object-fit: contain;
-  border-radius: 2%;
 }
 
 .slide h4,
@@ -635,6 +634,9 @@ section h3 {
 }
 .lds-dual-ring.active:after {
   animation: none; /* Menghentikan animasi saat kelas "active" ditambahkan */
+}
+#loadingSearch {
+  margin-left: -10px;
 }
 @keyframes lds-dual-ring {
   0% {
