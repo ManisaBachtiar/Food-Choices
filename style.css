@@ -55,7 +55,7 @@ header {
 
 .bars {
   width: 25px;
-  margin-left: 320px;
+  margin-left: 85%;
   margin-top: 20px;
   color: red;
   z-index: 99;
@@ -205,7 +205,7 @@ ion-icon {
   width: 70%;
   height: 50px;
   position: absolute;
-  margin-top: 520px;
+  margin-top: 78vh;
   flex-direction: row;
 }
 
@@ -695,7 +695,7 @@ footer {
   font-weight: var(--light-font);
 }
 
-@media screen and (min-width: 390px) {
+/* @media screen and (min-width: 390px) {
   .logo {
     margin-left: 101px;
   }
@@ -858,9 +858,13 @@ footer {
   .blur {
     height: 120vh;
   }
-}
+} */
+/* @media (min-width:320px){
+  
+} */
+
 /* Responsive Styles for Min Width 640px */
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 600px) {
   .menu-icon h1 {
     margin-left: 10px;
   }
@@ -908,7 +912,7 @@ footer {
   }
 
   .logo {
-    margin-left: 2%;
+    margin-left: 1%;
   }
 
   .slide h4,
