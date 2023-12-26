@@ -1,0 +1,165 @@
+/* @media screen and (min-width: 390px) {
+  .logo {
+    margin-left: 101px;
+  }
+
+  .slide h4,
+  .slide2 h4,
+  .slide3 h4,
+  .slide4 h4,
+  .slide5 h4 {
+    width: 70%;
+    margin-left: 17px;
+  }
+
+  .slide p,
+  .slide2 p,
+  .slide3 p,
+  .slide4 p,
+  .slide5 p {
+    margin-left: 27px;
+    width: 70%;
+  }
+
+  .bars {
+    margin-left: 350px;
+  }
+
+  .fa-angle-right {
+    margin-left: 350px;
+  }
+
+  .menu-links {
+    margin-top: 570px;
+  }
+}
+
+@media screen and (min-width: 410px) {
+  .logo {
+    margin-left: 28%;
+  }
+
+  .slide h4,
+  .slide2 h4,
+  .slide3 h4,
+  .slide4 h4,
+  .slide5 h4 {
+    width: 70%;
+    margin-left: 19px;
+  }
+
+  .slide p,
+  .slide2 p,
+  .slide3 p,
+  .slide4 p,
+  .slide5 p {
+    margin-left: 29px;
+    width: 70%;
+  }
+
+  .bars {
+    margin-left: 363px;
+  }
+
+  .fa-angle-right {
+    margin-left: 370px;
+  }
+
+  .menu-links {
+    margin-top: 650px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .logo {
+    margin-left: 65px;
+    margin-top: 20px;
+  }
+
+  .header-container {
+    margin-top: -11px;
+  }
+
+  .header-container h1 {
+    top: 20px;
+  }
+
+  .slide h4,
+  .slide2 h4,
+  .slide3 h4,
+  .slide4 h4,
+  .slide5 h4 {
+    width: 85%;
+    font-size: 14px;
+    margin-left: 2px;
+  }
+
+  .slide p,
+  .slide2 p,
+  .slide3 p,
+  .slide4 p,
+  .slide5 p {
+    margin-left: 12px;
+    font-size: 13px;
+    width: 85%;
+  }
+
+  .bars {
+    margin-top: 22px;
+    margin-left: 283px;
+  }
+
+  .fa-angle-right {
+    margin-left: 290px;
+  }
+
+  .menu-links {
+    margin-top: 350px;
+    margin-left: -10px;
+  }
+
+  .fa-times {
+    margin-left: 120px;
+  }
+
+  .fa-sort-desc {
+    margin-left: 185px;
+  }
+
+  .nextDrop:hover {
+    border: 1px solid #ced4da;
+    margin-left: 15px;
+    width: 215px;
+    border-radius: 5px;
+  }
+
+  .nav-content {
+    margin-top: 100px;
+  }
+
+  .slide img,
+  .slide2 img,
+  .slide3 img,
+  .slide4 img,
+  .slide5 img {
+    overflow: hidden;
+    margin: 20px auto;
+    width: 152px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 2%;
+  }
+
+  .slide,
+  .slide2,
+  .slide3,
+  .slide4,
+  .slide5 {
+    height: 250px;
+  }
+
+  .blur {
+    height: 120vh;
+  }
+} */
+/* Re
