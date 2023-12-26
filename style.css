@@ -874,6 +874,15 @@ footer {
     width: 27px;
     margin-left: 30%;
   }
+  .slide,
+.slide2,
+.slide3,
+.slide4,
+.slide5{
+background-color: red;
+width:45%;
+  }
+  
 }
 @media (min-width:520px){
   body{
@@ -883,6 +892,27 @@ footer {
     width: 27px;
     margin-left: 32%;
   }
+  .slide,
+  .slide2,
+  .slide3,
+  .slide4,
+  .slide5{
+  background-color: red;
+  width:38%;
+}
+.slide h4,
+.slide2 h4,
+.slide3 h4,
+.slide4 h4,
+.slide5 h4 {
+  margin-left:10px ;
+}
+.slide p,
+.slide2 p,
+.slide3 p,
+.slide4 p,
+.slide5 p{
+  margin-left: 20px;
 }
 /* Responsive Styles for Min Width 640px */
 @media screen and (min-width: 600px) {
@@ -890,6 +920,7 @@ footer {
     background-color:purple ;
    
   }
+  
   .menu-icons{
     background-color: white;
   }
@@ -948,6 +979,7 @@ footer {
   .slide3 h4,
   .slide4 h4,
   .slide5 h4 {
+    
     width: 70%;
     margin-left: 19px;
   }
@@ -965,11 +997,7 @@ footer {
     margin-left: 91%;
   
   }
-  .fa-times {
   
-  
-  }
-
 .fa-search{
   margin-left:0%;
   
@@ -1066,7 +1094,7 @@ footer {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 36%;
     margin-top: -10px;
     height: auto;
     border: 1px solid #ddd;
@@ -1080,7 +1108,7 @@ footer {
   .slide5 img {
     overflow: hidden;
     margin: 20px auto;
-    width: 222px;
+    width: 162px;
     height: auto;
     object-fit: contain;
     border-radius: 2%;
@@ -1103,8 +1131,9 @@ footer {
   .slide3 h4,
   .slide4 h4,
   .slide5 h4 {
-    width: 85%;
-    margin-left: 10px;
+   
+    width: 65%;
+    margin-left: 28px;
     font-size: 19px;
   }
 
@@ -1114,7 +1143,7 @@ footer {
   .slide4 p,
   .slide5 p {
     margin-top: -2px;
-    margin-left: 20px;
+    margin-left: 40px;
     width: 80%;
   }
 
@@ -1508,6 +1537,7 @@ body{
 .menu-icons{
   margin-left: 65%;
 }
+
 @media screen and (min-width: 1280px) {
   body{
     background-color: red;
