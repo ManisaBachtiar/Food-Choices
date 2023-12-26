@@ -1183,6 +1183,28 @@ width:45%;
   .nav-content .img2{
     margin-top:50px;
   }
+  .slide,
+.slide2,
+.slide3,
+.slide4,
+.slide5 {
+  width: 30%;
+}
+.slide h4,
+.slide2 h4,
+.slide3 h4,
+.slide4 h4,
+.slide5 h4{
+  margin-left:22px;
+}
+.slide p,
+.slide2 p,
+.slide3 p,
+.slide4 p,
+.slide5 p {
+  margin-left: 32px;
+}
+
 }
 @media (min-width:801px)  {
   body{
@@ -1203,6 +1225,27 @@ width:45%;
     margin-left:30px;
     width:90%;
   }
+  .slide,
+  .slide2,
+.slide3,
+.slide4,
+.slide5 {
+  width: 25%;
+}
+.slide h4,
+.slide2 h4,
+.slide3 h4,
+.slide4 h4,
+.slide5 h4{
+  margin-left:22px;
+}
+.slide p,
+.slide2 p,
+.slide3 p,
+.slide4 p,
+.slide5 p {
+  margin-left: 32px;
+}
 }
 @media (min-width:890px)  {
   body{
@@ -1408,7 +1451,7 @@ height:20px;
   .slide5 img {
     overflow: hidden;
     margin: 20px auto;
-    width: 222px;
+    width: 162px;
     height: auto;
     object-fit: contain;
     border-radius: 2%;
@@ -1537,7 +1580,29 @@ body{
 .menu-icons{
   margin-left: 65%;
 }
-
+.slide,
+.slide2,
+.slide3,
+.slide4,
+.slide5 {
+  width: 20%;
+}
+.slide h4,
+.slide2 h4,
+.slide3 h4,
+.slide4 h4,
+.slide5 h4{
+  width: 70%;
+  margin-left:22px;
+}
+.slide p,
+.slide2 p,
+.slide3 p,
+.slide4 p,
+.slide5 p {
+  margin-left: 32px;
+}
+}
 @media screen and (min-width: 1280px) {
   body{
     background-color: red;
