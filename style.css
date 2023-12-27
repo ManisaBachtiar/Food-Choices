@@ -55,7 +55,7 @@ header {
 
 .bars {
   width: 25px;
-  margin-left: 90%;
+  margin-left: 88%;
   margin-top: 20px;
   color: red;
   z-index: 99;
@@ -95,7 +95,7 @@ input:-webkit-autofill:focus {
   position: absolute;
   top: 73px;
   right: 0;
-  left: 89%;
+  left: 87%;
   background-color: white;
 
   color: grey;
