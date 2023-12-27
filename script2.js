@@ -83,6 +83,10 @@ function fetchRecipes(url) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
+      let loadElements = document.getElementsByClassName("loader");
+      Array.from(loadElements).forEach((element) => {
+        element.style.display = "none";
+      });
       console.log("Data received:", data); // Log the received data
       let paginationPage = "";
       let foodSearch = data.hits;

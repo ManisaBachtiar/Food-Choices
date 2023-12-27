@@ -1,3 +1,19 @@
+function updateScrollbarVisibility() {
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  if (screenWidth <= 600) {
+      document.querySelectorAll('.slider-container, .slider-container2, .slider-container3, .slider-container4, .slider-container5').forEach(function(element) {
+          element.classList.add('desktop-scrollbar');
+      });
+  } else {
+      document.querySelectorAll('.slider-container, .slider-container2, .slider-container3, .slider-container4, .slider-container5').forEach(function(element) {
+          element.classList.remove('desktop-scrollbar');
+      });
+  }
+}
+window.addEventListener('load', updateScrollbarVisibility);
+window.addEventListener('resize', updateScrollbarVisibility);
+
 let closeBar = document.getElementsByClassName("bars");
 let closeBarOpen = closeBar[0];
 let sideBar = document.getElementsByClassName("slide-nav3");
@@ -106,7 +122,7 @@ window.addEventListener("load", function () {
         healthtypeFoods = healthtypeData.hits;
         diettypeFoods = diettypeData.hits;
         processData();
-        let loadElements = document.getElementsByClassName("lds-dual-ring");
+        let loadElements = document.getElementsByClassName("loader");
         Array.from(loadElements).forEach((element) => {
           element.style.display = "none";
         });
