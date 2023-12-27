@@ -90,21 +90,35 @@ html {
 .link:hover {
   background-color: #cc0000;
 }
-@media (max-width: 600px) {
+/* @media (min-width: 800px) {
+  body{
+    background-color: pink;
+  }
   .container {
+    height: 700px;
     padding-bottom: 10px;
   }
 
   .title {
     font-size: 18px;
+   margin-top: 350px;
+   margin-left: -88%;
   }
-
+.link{
+  
+  margin-left: -88%;
+}
   .link,
   .ingredients {
     font-size: 14px;
   }
 
   .section img {
+    margin-top: -90px;
     margin-right: 0;
   }
 }
+@media (min-width:1025px) { 
+  body{
+    background-color: red;
+  }} */
