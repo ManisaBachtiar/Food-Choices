@@ -84,6 +84,7 @@ background-color: #ff1a1a;
 .detail3 p {
   margin: 10px;
   width: 90%;
+  overflow-x: hidden;
   font-weight: var(--middle-font);
 }
 .container {
