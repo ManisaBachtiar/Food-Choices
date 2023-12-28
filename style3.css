@@ -93,7 +93,7 @@ background-color: #ff1a1a;
 }
 
 .section {
-  height: 230px;
+  height: auto;
   display: flex;
   align-items: center;
   background-color: red;
