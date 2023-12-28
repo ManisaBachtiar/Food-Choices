@@ -1682,7 +1682,7 @@ padding:0px;
 @media screen and (min-width: 1100px){
 
 body{
-  background-color: black;
+  background-color: #e9e8e8;
 }
 .menu-icons{
   margin-left: 65%;
@@ -1713,7 +1713,7 @@ body{
 }
 @media screen and (min-width: 1280px) {
   body{
-    background-color: red;
+   
   }
   .nav-content {
     background-color: white;

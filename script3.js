@@ -25,20 +25,35 @@ function showRecipeDetails(recipe) {
       </div>
     </div>
   </div>
+  <div class="container2">
   <div class="detail2">
-    <h4>Ingredients :</h4>
-    <p>${recipe.ingredientLines}</p>
+  <div class="row">
+    <div class="column">
+      <h4>Dish Type :</h4>
+      <p>${recipe.dishType}</p>
+    </div>
+    <div class="column">
+      <h4>Meal Type :</h4>
+      <p>${recipe.mealType}</p>
+    </div>
   </div>
-  <div class="detail3">
-    <h4>Dish Type :</h4>
-    <p>${recipe.dishType}</p>
-    <h4>Meal Type :</h4>
-    <p>${recipe.mealType}</p>
+  <div class="row">
+    <div class="column">
       <h4>Cuisine Type :</h4>
-    <p>${recipe.cuisineType}</p>
-    <h4>Diet Type :</h4>
-    <p>${recipe.dietLabels}</p>
+      <p>${recipe.cuisineType}</p>
+    </div>
+    <div class="column">
+      <h4>Diet Type :</h4>
+      <p>${recipe.dietLabels}</p>
+    </div>
+  </div>
+</div>
+  <div class="detail3">
+  <h4>Ingredients :</h4>
+    <p>${recipe.ingredientLines}</p>
     <h4>Health Type :</h4>
     <p>${recipe.healthLabels}</p>
+    
+  </div>
   </div>`;
 }

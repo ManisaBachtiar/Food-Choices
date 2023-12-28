@@ -1,4 +1,5 @@
 * {
+  
   font-family: "Poppins", sans-serif;
   margin: 0px;
   padding: 0px;
@@ -16,19 +17,61 @@ html {
 
   color: grey;
 }
-.detail2 {
+/* .detail2 {
+ display: flex;
   width: 100%;
-  height: auto;
-  background-color: white;
+  flex-wrap: wrap; 
+  height: 200px;
+ flex-direction: column;
+  background-color: green;
 }
 .detail2 h4 {
-  margin: 10px;
-  padding-top: 10px;
+  flex: 1;
+  width: 40%;
+  background-color: blue;
+
 }
 .detail2 p {
-  margin: 10px;
-  padding-bottom: 15px;
+  flex: 1;
+  overflow-y: hidden;
+ width:40%;
+ 
+
+} */
+.detail2 {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  height: auto;
+  margin-top: 10px;
+  flex-direction: column;
+  background-color: white;
 }
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.column {
+  padding-top: 5px;
+  padding-bottom: 5px;
+background-color: rgb(240, 70, 70);
+  flex: 1;
+  width: 45%; /* Adjusted width to leave some space between columns */
+  margin: 1%; 
+  
+ 
+}
+
+.detail2 h4,
+.detail2 p {
+  margin-left: 10%;
+  flex: 1;
+  overflow-y: hidden;
+  width: 90%;
+}
+
 .detail3 h4 {
   margin: 10px;
   padding-top: 10px;
@@ -45,16 +88,19 @@ html {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+ 
 }
 
 .section {
   display: flex;
   align-items: center;
 }
+.container2{
+width: 100%;
 
+}
 .section img {
-  width: 47%;
+  width: 42%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -65,6 +111,7 @@ html {
 
 .title-link {
   flex-grow: 1;
+ 
 }
 
 .title {
@@ -73,11 +120,11 @@ html {
   font-weight: bold;
   color: black;
   margin-bottom: 10px;
-  margin-left: 20px;
+  margin-left: 12px;
 }
 
 .link {
-  margin-left: 20px;
+  margin-left: 10px;
   display: inline-block;
   padding: 10px 10px;
   background-color: #ff3333;
@@ -90,35 +137,116 @@ html {
 .link:hover {
   background-color: #cc0000;
 }
-/* @media (min-width: 800px) {
+@media (min-width:480px){
+  body{
+    background-color: orange;
+  }
+  .section img{
+    width: 180px;
+  }
+  
+}
+@media (min-width:520px){
   body{
     background-color: pink;
   }
-  .container {
-    height: 700px;
-    padding-bottom: 10px;
+  .section img{
+    width: 180px;
   }
-
-  .title {
-    font-size: 18px;
-   margin-top: 350px;
-   margin-left: -88%;
-  }
-.link{
-  
-  margin-left: -88%;
-}
-  .link,
-  .ingredients {
-    font-size: 14px;
-  }
-
-  .section img {
-    margin-top: -90px;
-    margin-right: 0;
+  .title{
+    width: 50%;
   }
 }
-@media (min-width:1025px) { 
+@media screen and (min-width: 600px) {
   body{
+    background-color:purple ;
+   
+  }
+  .section img{
+    width: 180px;
+  }
+}
+@media (min-width:705px)  {
+   body{
+    background-color: green;
+    
+  }
+  .detail2{
+   
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+  }
+  .row {
+   
+    display: flex;
+
+    width:100%;
+   
+  }
+  .column{
+   
+    width: 100%;
+   
+  }
+  .detail3{
+    display: flex;
+    background-color: green;
+  }
+  .detail3 h4{
     background-color: red;
-  }} */
+  }
+  .detail3 h4{
+    
+  }
+
+  /*
+  .row{
+    display: block;
+  }
+  .column{
+    display: block;
+    width: 90%;
+  }
+  .title{
+    width: 40%;
+  }
+  .detail2{
+    width:45%;
+    background-color: red;
+  }
+
+  .detail3{
+    width: 70%;
+
+  }
+  .container2{
+    display: flex;
+  } */
+}
+@media (min-width:801px)  {
+  body{
+    background-color: black;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body{
+    background-color: yellow;
+  }
+}
+@media screen and (min-width: 1065px) {
+  body{
+    background-color: grey;
+  }
+}
+@media screen and (min-width: 1100px){
+
+  body{
+    background-color: #24a7cf;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body{
+   background-color: red;
+  }
+}
