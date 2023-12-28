@@ -77,7 +77,7 @@ window.addEventListener("load", function () {
   }
 });
 
-// ... (fungsi-fungsi lainnya tetap sama)
+
 
 function fetchRecipes(url) {
   fetch(url)
@@ -127,7 +127,6 @@ function fetchRecipes1(url) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log("Data received:", data); // Log the received data
       let paginationPage = "";
       let foodSearch = data.hits;
       nextPage = data._links.next ? data._links.next.href : null;
