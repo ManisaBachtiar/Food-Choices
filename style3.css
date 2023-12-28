@@ -18,27 +18,7 @@ html {
 
   color: grey;
 }
-/* .detail2 {
- display: flex;
-  width: 100%;
-  flex-wrap: wrap; 
-  height: 200px;
- flex-direction: column;
-  background-color: green;
-}
-.detail2 h4 {
-  flex: 1;
-  width: 40%;
-  background-color: blue;
 
-}
-.detail2 p {
-  flex: 1;
-  overflow-y: hidden;
- width:40%;
- 
-
-} */
 .detail2 {
   display: flex;
   width: 100%;
@@ -57,7 +37,7 @@ html {
 .column {
   padding-top: 5px;
   padding-bottom: 5px;
-background-color: #ff1a1a;
+background-color: rgb(175, 17, 17);
   flex: 1;
   width: 45%; /* Adjusted width to leave some space between columns */
   margin: 1%; 
@@ -99,7 +79,7 @@ background-color: #ff1a1a;
   height: auto;
   display: flex;
   align-items: center;
-  background-color: red;
+  background-color: rgb(175, 17, 17);
 }
 .container2{
 width: 100%;
@@ -134,7 +114,7 @@ width: 100%;
   margin-left: 10px;
   display: inline-block;
   padding: 10px 10px;
-  background-color: #ff3333;
+  background-color: #e72e2e;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -204,53 +184,4 @@ width: 50%;
 margin-left: -20%;
   }
 }
-  /*
-  .row{
-    display: block;
-  }
-  .column{
-    display: block;
-    width: 90%;
-  }
-  .title{
-    width: 40%;
-  }
-  .detail2{
-    width:45%;
-    background-color: red;
-  }
-
-  .detail3{
-    width: 70%;
-
-  }
-  .container2{
-    display: flex;
-  } */
-
-/* @media (min-width:801px)  {
-  body{
-    background-color: black;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body{
-    background-color: yellow;
-  }
-}
-@media screen and (min-width: 1065px) {
-  body{
-    background-color: grey;
-  }
-}
-@media screen and (min-width: 1100px){
-
-  body{
-    background-color: #24a7cf;
-  }
-}
-@media screen and (min-width: 1280px) {
-  body{
-   background-color: red;
-  }
-} */
+ 
