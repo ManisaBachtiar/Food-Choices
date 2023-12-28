@@ -61,6 +61,7 @@ background-color: #ff1a1a;
   flex: 1;
   width: 45%; /* Adjusted width to leave some space between columns */
   margin: 1%; 
+  height: 80px;
   
  
 }
