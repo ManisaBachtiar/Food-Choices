@@ -347,9 +347,10 @@ ion-icon {
   width: 45%;
   height: 70px;
   border: 1px solid #ddd;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
+.menu:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 .menu img {
   width: 50px;
   margin-left: 10px;
@@ -528,6 +529,9 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 15px;
   background-color: white;
+}
+.card:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .card img {
   overflow: hidden;
