@@ -8,4 +8,4 @@ Welcome to the **Food Choices** project repository! This web application is desi
 - **CSS:** Stylesheets for enhancing the visual appeal.
 - **Vanilla JavaScript:** For dynamic and interactive features.
 
-Thank you for checking out our Food Website project! Happy coding! 🍔🍕🍜
+Thank you for checking out my project! Happy coding! 🍔🍕🍜
