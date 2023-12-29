@@ -8,7 +8,7 @@ window.addEventListener("load", function () {
 
   if (queryParam) {
     fetchRecipes(
-      `https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&q=${queryParam}`,
+      `https://api.edamam.com/api/recipes/v2?type=public&app_id=076f43bf&app_key=3e6837f40ecfd40b40632b5fb3e5e42c&q=${queryParam}`,
     );
   } else {
     console.error("Parameter query tidak ditemukan");
@@ -19,23 +19,23 @@ window.addEventListener("load", function () {
     switch (clickedIndex1) {
       case 0:
         fetchRecipes1(
-          "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&mealType=Breakfast",
+          "https://api.edamam.com/api/recipes/v2?type=public&app_id=370c2990&app_key=e174ba5713b2f4e84b8d4f93274afaf9&mealType=Breakfast",
         );
         break;
 
       case 1:
         fetchRecipes1(
-          "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&mealType=Lunch",
+          "https://api.edamam.com/api/recipes/v2?type=public&app_id=ffdd7a56&app_key=325e9b4cd35cbdb222d08623818e9fc4&mealType=Lunch",
         );
         break;
       case 2:
         fetchRecipes1(
-          "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&mealType=Dinner",
+          "https://api.edamam.com/api/recipes/v2?type=public&app_id=d0814049&app_key=b76f9cc2c88b9aee175950ded1a03b8b&mealType=Dinner",
         );
         break;
       case 3:
         fetchRecipes(
-          "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Drinks",
+          "https://api.edamam.com/api/recipes/v2?type=public&app_id=293debff&app_key=81b324e2ab4b50ab8a6434389c41e462&dishType=Drinks",
         );
         break;
       default:
@@ -48,27 +48,27 @@ window.addEventListener("load", function () {
     switch (clickedIndex) {
       case 0:
         fetchRecipes(
-          "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Biscuits%20and%20cookies&dishType=Bread&dishType=Cereals",
+          "https://api.edamam.com/api/recipes/v2?type=public&app_id=293debff&app_key=81b324e2ab4b50ab8a6434389c41e462&dishType=Biscuits%20and%20cookies&dishType=Bread&dishType=Cereals",
         );
         break;
       case 1:
         fetchRecipes(
-          "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Main%20course",
+          "https://api.edamam.com/api/recipes/v2?type=public&app_id=ffdd7a56&app_key=325e9b4cd35cbdb222d08623818e9fc4&dishType=Main%20course",
         );
         break;
       case 2:
         fetchRecipes(
-          "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Starter",
+          "https://api.edamam.com/api/recipes/v2?type=public&app_id=370c2990&app_key=e174ba5713b2f4e84b8d4f93274afaf9&dishType=Starter",
         );
         break;
       case 3:
         fetchRecipes(
-          "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Condiments%20and%20sauces",
+          "https://api.edamam.com/api/recipes/v2?type=public&app_id=370c2990&app_key=e174ba5713b2f4e84b8d4f93274afaf9&dishType=Condiments%20and%20sauces",
         );
         break;
       case 4:
         fetchRecipes(
-          "https://api.edamam.com/api/recipes/v2?type=public&app_id=c16f14bf&app_key=afef254282056eb258798674f41e04d2&dishType=Preserve",
+          "https://api.edamam.com/api/recipes/v2?type=public&app_id=076f43bf&app_key=3e6837f40ecfd40b40632b5fb3e5e42c&dishType=Preserve",
         );
         break;
       default:
@@ -76,8 +76,6 @@ window.addEventListener("load", function () {
     }
   }
 });
-
-
 
 function fetchRecipes(url) {
   fetch(url)
