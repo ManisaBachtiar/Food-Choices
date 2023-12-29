@@ -1,11 +1,10 @@
 * {
-  
   font-family: "Poppins", sans-serif;
   margin: 0px;
   padding: 0px;
 }
 html {
-  height:auto ;
+  height: auto;
   background-color: #f1f1f1;
 }
 :root {
@@ -27,28 +26,30 @@ html {
   margin-top: 10px;
   flex-direction: column;
   background-color: white;
+  padding: 10px 0;
 }
 
 .row {
   display: flex;
-  width: 100%;
+  margin-left: 4px;
+  width: 98%;
 }
 
 .column {
   padding-top: 5px;
   padding-bottom: 5px;
-background-color: rgb(175, 17, 17);
+  background-color: white;
+  border: 1px solid #ddd;
   flex: 1;
-  width: 45%; 
-  margin: 1%; 
+  width: 43%;
+  margin: 1%;
   height: auto;
-  
- 
+  border-radius: 2px;
 }
 
 .detail2 h4,
 .detail2 p {
-  margin-left: 10%;
+  margin-left: 5%;
   flex: 1;
   overflow-y: hidden;
   width: 90%;
@@ -63,7 +64,7 @@ background-color: rgb(175, 17, 17);
   background-color: white;
 }
 .detail3 p {
-  margin: 10px;
+  margin: -4px 15px;
   width: 90%;
   overflow-x: hidden;
   font-weight: var(--middle-font);
@@ -72,18 +73,17 @@ background-color: rgb(175, 17, 17);
   width: 100%;
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
- 
 }
 
 .section {
   height: auto;
   display: flex;
   align-items: center;
-  background-color: rgb(175, 17, 17);
+  background-color: white;
+  padding-bottom: 10px;
 }
-.container2{
-width: 100%;
-
+.container2 {
+  width: 100%;
 }
 .section img {
   width: 45%;
@@ -93,11 +93,11 @@ width: 100%;
   max-height: 300px;
   object-fit: cover;
   margin: 5px;
+  margin-left: 8px;
 }
 
 .title-link {
   flex-grow: 1;
- 
 }
 
 .title {
@@ -106,7 +106,7 @@ width: 100%;
   font-weight: bold;
   color: black;
   margin-bottom: 10px;
-  
+
   margin-left: 12px;
 }
 
@@ -124,63 +124,51 @@ width: 100%;
 .link:hover {
   background-color: #cc0000;
 }
-@media (min-width:480px){
-  
-  .section img{
+@media (min-width: 480px) {
+  .section img {
     width: 180px;
   }
-  
 }
-@media (min-width:520px){
- 
-  .section img{
+@media (min-width: 520px) {
+  .section img {
     width: 180px;
   }
-  .title{
+  .title {
     width: 50%;
   }
 }
 @media screen and (min-width: 600px) {
-  
-  .section img{
+  .section img {
     width: 180px;
   }
 }
-@media (min-width:705px)  {
-   
-  .detail2{
-   
+@media (min-width: 705px) {
+  .detail2 {
     flex-wrap: nowrap;
     display: flex;
     flex-direction: row;
   }
   .row {
-   
     display: flex;
 
-    width:100%;
-   
-  }
-  .column{
-   
     width: 100%;
-   
   }
-  .detail3{
+  .column {
+    width: 100%;
+  }
+  .detail3 {
+    margin-top: 10px;
     display: flex;
-   
+    padding-bottom: 30px;
   }
-  .detail3 h4{
-    
-   height: 20px;
-   width: 20%;
-   
+  .detail3 h4 {
+    height: 20px;
+    width: 20%;
   }
 
-  .detail3 p{
-  margin-top: 50px;
-  width: 50%;
-  margin-left: -20%;
+  .detail3 p {
+    margin-top: 50px;
+    width: 50%;
+    margin-left: -20%;
   }
 }
- 

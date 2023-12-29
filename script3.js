@@ -21,7 +21,7 @@ function showRecipeDetails(recipe) {
       <img src="${recipe.image}" />
       <div class="title-link">
         <div class="title">${recipe.label}</div>
-        <a href="${recipe.url}" class="link">See Detail Recipe</a>
+        <a href="${recipe.url}" class="link">Recipe's Detail</a>
       </div>
     </div>
   </div>
@@ -30,29 +30,29 @@ function showRecipeDetails(recipe) {
   <div class="row">
     <div class="column">
       <h4>Dish Type :</h4>
-      <p>${recipe.dishType}</p>
+      <p>${recipe.dishType.join(", ")}</p>
     </div>
     <div class="column">
       <h4>Meal Type :</h4>
-      <p>${recipe.mealType}</p>
+      <p>${recipe.mealType.join(", ")}</p>
     </div>
   </div>
   <div class="row">
     <div class="column">
       <h4>Cuisine Type :</h4>
-      <p>${recipe.cuisineType}</p>
+      <p>${recipe.cuisineType.join(", ")}</p>
     </div>
     <div class="column">
       <h4>Diet Type :</h4>
-      <p>${recipe.dietLabels}</p>
+      <p>${recipe.dietLabels.join(" ")}</p>
     </div>
   </div>
 </div>
   <div class="detail3">
   <h4>Ingredients :</h4>
-    <p>${recipe.ingredientLines}</p>
+    <p>${recipe.ingredientLines.join("<br>")}</p>
     <h4>Health Type :</h4>
-    <p>${recipe.healthLabels}</p>
+    <p>${recipe.healthLabels.join(", ")}</p>
     
   </div>
   </div>`;
