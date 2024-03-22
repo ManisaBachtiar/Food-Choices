@@ -368,6 +368,7 @@ section {
   top: 0;
   margin-top: 25px;
   width: 100%;
+  position:relative;
   height: 340px;
   display: flex;
   flex-direction: column;
@@ -445,13 +446,13 @@ section h3 {
 .slide3 h4,
 .slide4 h4,
 .slide5 h4 {
-  width: 80%;
+  width: 40%;
   height: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 15px;
-  margin-left: 8px;
+  margin-left: 18px;
   text-align: left;
   margin-top: -18px;
   padding: 10px;
@@ -482,16 +483,14 @@ section h3 {
   font-weight: var(--light-font);
 }
 
-/* .slider-container::-webkit-scrollbar,
+.slider-container::-webkit-scrollbar,
 .slider-container2::-webkit-scrollbar,
 .slider-container3::-webkit-scrollbar,
 .slider-container4::-webkit-scrollbar,
 .slider-container5::-webkit-scrollbar {
   display: none;
-} */
-.desktop-scrollbar::-webkit-scrollbar {
-  display: none;
 }
+
 .fa-angle-right {
   font-size: 20px;
   color: #d9534f;
@@ -514,8 +513,12 @@ section h3 {
   display: flex;
   width: 100%;
   height: auto;
+  position:relative;
   background-color: #fbfbfb;
   flex-wrap: wrap;
+}
+.food-container .loader{
+  margin-left:0;
 }
 .card {
   margin: 10px;
@@ -708,10 +711,7 @@ footer {
 }
 
 @media (min-width: 480px) {
-  .nav-content{
-    background-color: pink;
-  }
-  section {
+   section {
     scroll-margin-top: 120px;
     top: 0;
     margin-top: 25px;
@@ -751,7 +751,6 @@ footer {
 @media (min-width: 801px) {
   .nav-content {
     height: 440px;
-    background-color: red;
     position: relative;
 
   }
@@ -924,8 +923,8 @@ footer {
   .slide3 h4,
   .slide4 h4,
   .slide5 h4 {
-    width: 85%;
-    margin-left: 5px;
+    width: 50%;
+    margin-left: 30px;
     font-size: 17px;
   }
 
@@ -935,8 +934,8 @@ footer {
   .slide4 p,
   .slide5 p {
     margin-top: -2px;
-    margin-left: 15px;
-    width: 80%;
+    margin-left: 30px;
+    width: 70%;
   }
 
   section h3 {
@@ -944,8 +943,12 @@ footer {
   }
 
   .food-container {
+    position:relative;
     margin-top: 110px;
     gap: 2px;
+  }
+  .food-container .loader{
+    margin-left:0;
   }
   .card {
     margin: 10px;
@@ -987,7 +990,5 @@ footer {
 @media screen and (min-width: 1024px) {
   .nav-content {
     height: 440px;
-    background-color: blue;
-  }
 }
 
